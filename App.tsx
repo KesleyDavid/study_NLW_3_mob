@@ -6,24 +6,13 @@ import styled from 'styled-components/native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Title>Open up App.tsx to start working on your app!</Title>
+    <Container>
       <StatusBar style="auto" />
-    </View>
+    </Container>
   );
 }
 
-const Title = styled.Text`
-  color: red;
-  text-align: center;
-  font-size: 16px;
+const Container = styled.View`
+  flex: 1;
 `;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

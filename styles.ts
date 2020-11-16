@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled, { StyledFunction } from 'styled-components/native';
 import { Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
 
@@ -50,8 +50,13 @@ export const Footer = styled.View`
   shadow-radius: 2px;
 `;
 
-export const FooterText = styled.Text`
+interface iFontFamily {
+  fontFamily: string | null; //any
+}
+
+export const FooterText = styled.Text<iFontFamily>`
   color: #8fa7b3;
+  font-family: ${p => p.fontFamily};
 `;
 
 

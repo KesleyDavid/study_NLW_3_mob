@@ -1,23 +1,18 @@
 import React from 'react';
 import { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import { Feather } from '@expo/vector-icons';
-import { useFonts } from 'expo-font';
-import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
+import { useNavigation } from '@react-navigation/native';
 
-import mapMarker from '../images/map-marker.png';
+import mapMarker from '../../images/map-marker.png';
 
-import * as S from './OrphanagesMapStyles';
+import * as S from './styled';
 
 export default function OrphanagesMap() {
-  const [ fontsLoaded ] = useFonts({
-    Nunito_600SemiBold,
-    Nunito_700Bold,
-    Nunito_800ExtraBold,
-  });
-  // nunito700: Nunito_700Bold, => utilizar nunito700
+  
+  const navigation = useNavigation();
 
-  if (!fontsLoaded) {
-    return null;
+  function handleNavigateToOrphanageDetails() {
+    navigation.navigate('OrphanageDetails');
   }
 
   return (
@@ -42,7 +37,7 @@ export default function OrphanagesMap() {
             longitude: -49.325404,
           }}
         >
-          <Callout tooltip onPress={() => {}}>
+          <Callout tooltip onPress={handleNavigateToOrphanageDetails}>
             <S.CalloutContainer>
               <S.CalloutText fontFamily='Nunito_700Bold'>Texto texto texto</S.CalloutText>
             </S.CalloutContainer>

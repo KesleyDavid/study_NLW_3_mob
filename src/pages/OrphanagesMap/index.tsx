@@ -15,6 +15,10 @@ export default function OrphanagesMap() {
     navigation.navigate('OrphanageDetails');
   }
 
+  function handleNavigateToCreateOrphanage(){
+    navigation.navigate('SelectMapPosition');
+  }
+
   return (
     <S.Container>
       <S.MapViewMain 
@@ -48,7 +52,7 @@ export default function OrphanagesMap() {
         <S.FooterText fontFamily='Nunito_700Bold'>
           x orfanatos encontrados
         </S.FooterText>
-        <S.FooterButton onPress={() => {}}>
+        <S.FooterButton onPress={handleNavigateToCreateOrphanage}>
           <Feather name="plus" size={20} color="#FFF" />
         </S.FooterButton>
       </S.Footer>

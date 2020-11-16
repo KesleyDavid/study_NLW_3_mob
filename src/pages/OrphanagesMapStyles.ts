@@ -1,6 +1,10 @@
-import styled, { StyledFunction } from 'styled-components/native';
+import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
+
+interface iFontFamily {
+  fontFamily: string | null; //any
+}
 
 export const Container = styled.View`
   flex: 1;
@@ -19,10 +23,11 @@ export const CalloutContainer = styled.View`
   justify-content: center;
 `;
 
-export const CalloutText = styled.Text`
+export const CalloutText = styled.Text<iFontFamily>`
   text-align: center;
   color: #0089a5;
   font-size: 14px;
+  font-family: ${p => p.fontFamily};
 `;
 
 export const Footer = styled.View`
@@ -50,15 +55,10 @@ export const Footer = styled.View`
   shadow-radius: 2px;
 `;
 
-interface iFontFamily {
-  fontFamily: string | null; //any
-}
-
 export const FooterText = styled.Text<iFontFamily>`
   color: #8fa7b3;
   font-family: ${p => p.fontFamily};
 `;
-
 
 export const FooterButton = styled.TouchableOpacity`
   width: 56px;

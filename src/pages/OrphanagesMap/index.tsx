@@ -49,7 +49,7 @@ export default function OrphanagesMap() {
         </Marker>
       </S.MapViewMain>
       <S.Footer>
-        <S.FooterText fontFamily='Nunito_700Bold'>
+        <S.FooterText>
           x orfanatos encontrados
         </S.FooterText>
         <S.FooterButton onPress={handleNavigateToCreateOrphanage}>

@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 import MapView from 'react-native-maps';
 
 interface iFontFamily {
@@ -55,12 +56,12 @@ export const Footer = styled.View`
   shadow-radius: 2px;
 `;
 
-export const FooterText = styled.Text<iFontFamily>`
+export const FooterText = styled.Text`
   color: #8fa7b3;
-  font-family: ${p => p.fontFamily};
+  font-family: Nunito_700Bold;
 `;
 
-export const FooterButton = styled.TouchableOpacity`
+export const FooterButton = styled(RectButton)`
   width: 56px;
   height: 56px;
   background: #15c3d6;

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 
@@ -72,7 +70,7 @@ export default function OrphanageData() {
 
       <S.SwitchContainer>
         <S.Label>Atende final de semana?</S.Label>
-        <Switch 
+        <S.Switch 
           thumbColor="#fff" 
           trackColor={{ false: '#ccc', true: '#39CC83' }}
           value={open_on_weekends}

@@ -33,7 +33,7 @@ export const TextInput = styled.TextInput`
   padding-top: 24px;
   padding-bottom: 24px;
   margin-bottom: 16px;
-  text-align: top;
+  text-align: center;
 `;
 
 export const TextAreaInput = styled(TextInput)`
@@ -58,6 +58,8 @@ export const SwitchContainer = styled.View`
   justify-content: space-between;
   margin-top: 16px;
 `;
+
+export const Switch = styled.Switch``;
 
 export const NextButton = styled(RectButton)`
   background-color: #15c3d6;

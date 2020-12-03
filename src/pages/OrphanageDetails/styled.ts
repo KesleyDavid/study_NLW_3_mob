@@ -27,7 +27,7 @@ export const DetailsContainer = styled.View`
 
 export const Title = styled.Text`
   color: #4D6F80;
-  font-size: 30;
+  font-size: 30px;
   font-family: 'Nunito_700Bold';
 `;
 

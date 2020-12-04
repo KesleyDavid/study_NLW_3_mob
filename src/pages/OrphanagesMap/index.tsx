@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+
+import api from '../../services/api';
 
 import mapMarkerImg from '../../images/map-marker.png';
 
 import * as S from './styled';
 
 export default function OrphanagesMap() {
-  
+  const [orphanages, setOrphanages] = useState([]);
   const navigation = useNavigation();
 
+  useEffect(() => {
+    api.get('orphanages').then(response => {
+      setOrphanages(response.data);
+    });
+  }, []);
+  
   function handleNavigateToOrphanageDetails() {
     navigation.navigate('OrphanageDetails');
   }
